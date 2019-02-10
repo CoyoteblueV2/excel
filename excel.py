@@ -9,11 +9,7 @@ def parameters():
 def worksheets(workbook):
 	worksheet1 = workbook.active
 	worksheet1.title = "worksheet1"
-	worksheet2 = workbook.create_sheet("worksheet2")
 	worksheet1.sheet_properties.tabColor = "1072BA"
-	source = workbook.active
-	worksheet3 = workbook.copy_worksheet(source)
-	worksheet3.title = "worksheet3"
 	return worksheet1
 
 def cells(worksheet):
@@ -47,7 +43,7 @@ def save_workbook(workbook,filename):
 
 def change_cell():
 	#modify the name and function of this feature with something useful.
-	quit = str(raw_input("You get to do something with the workbook here, press any key to continue: \n"))
+	raw_input("You get to do something with the workbook here, press any key to continue: \n")
 
 def main(arg_array):
 	print 'Checking inputs...'
